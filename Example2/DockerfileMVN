@@ -1,0 +1,6 @@
+FROM openjdk:8-jdk
+RUN apt-get install maven && apt-get install git
+COPY . /app
+WORKDIR /app
+CMD git clone https://github.com/wastene/HSE_CND_Example1.git; cd HSE_CND_Example1; 
+CMD ["java","-jar","Demo.jar"]

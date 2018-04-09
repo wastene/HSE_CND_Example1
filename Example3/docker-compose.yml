@@ -1,0 +1,16 @@
+version: '3'
+services:
+    mysql:
+        image: mysql-greeting-db:latest
+        build:
+            context: ./mysql-greeting-db
+
+    web:
+        image: mysql-demo-webapp:latest
+        build:
+            context: .
+        depends_on:
+            - mysql
+        ports:
+            - "80:8080"
+

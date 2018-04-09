@@ -1,0 +1,3 @@
+FROM mysql:latest
+ENV MYSQL_ROOT_PASSWORD=root MYSQL_DATABASE=greetingdb MYSQL_USER=adbeit00 MYSQL_PASSWORD=adbeit00
+
